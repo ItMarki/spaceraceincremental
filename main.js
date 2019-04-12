@@ -6,6 +6,6 @@ var rockLaunch1 = function(){
       fuel -= 1;
       money += 10
       }
-getRockLaunch1.textContent = "Rocket launched. Generating currency...";
+getRockLaunch1.textContent = "Test";
 };
 getRockLaunch1.addEventListener("click", rockLaunch1);
