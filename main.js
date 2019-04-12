@@ -3,7 +3,7 @@ var getMoney = document.getElementById("money");
 var money = 0;
 var rockLaunch1 = function()
   var fuel = 100;
-  if (fuel > 0 {
+  if (fuel > 0) {
       fuel -= 1;
       money += 10
       }
