@@ -1,5 +1,5 @@
 var getRockLaunch1 = document.getElementById("rockLaunch1");
-var getMoney = document.getElementById("money");
+document.getElementById("money").innerHTML = money;
 var money = 0;
 var rockLaunch1 = function() {
   var fuel = 100;
