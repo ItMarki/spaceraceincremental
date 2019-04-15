@@ -9,5 +9,5 @@ function rockLaunch1() {
   game.fuel = 0;
   document.getElementById("money").innerHTML = game.money;
 }
-
+document.getElementById("money").innerHTML = game.money;
 
