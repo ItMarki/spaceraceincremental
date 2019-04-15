@@ -4,13 +4,10 @@ var game = {
   fuel:100
   
 };
-
-document.getElementById("money").innerHTML = game.money;
-var rocketLaunch1 = function() {
-  game.fuel = game.fuel - 100;
-  game.money = game.money + 1000;
-rockLaunch1.textContent = "Test";
-};
+function rockLaunch1() {
+  game.money = game.money + (game.fuel*10);
+  game.fuel = 0;
+  document.getElementById("money").innerHTML = game.money;
+}
 
 
-rocketLaunch1.addEventListener("click", rockLaunch1);
