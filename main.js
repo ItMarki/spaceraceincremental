@@ -15,4 +15,4 @@ var game = {
   
 }
 
-rocketLaunch1.addEventListener("click", rockLaunch1);
+game.rocketLaunch1.addEventListener("click", rockLaunch1);
