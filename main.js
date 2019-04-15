@@ -1,7 +1,7 @@
 var rocketLaunch1 = document.getElementById("rockLaunch1");
 var game = {
-  money = 0,
-  fuel = 100
+  money:0,
+  fuel:100
   
 };
 
