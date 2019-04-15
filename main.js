@@ -5,7 +5,7 @@ var game = {
   
 };
 
-document.getElementById("money").innerHTML = money;
+document.getElementById("money").innerHTML = game.money;
 var rocketLaunch1 = function() {
   game.fuel = game.fuel - 100;
   game.money = game.money + 1000;
