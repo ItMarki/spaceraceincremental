@@ -1,6 +1,9 @@
 var rocketLaunch1 = document.getElementById("rockLaunch1");
-var money = 0;
-var fuel = 100
+var game = {
+  money = 0,
+  fuel = fuel,
+  
+};
 
 document.getElementById("money").innerHTML = money;
 var rocketLaunch1 = function() {
@@ -8,10 +11,6 @@ var rocketLaunch1 = function() {
   money = money + 1000;
 rockLaunch1.textContent = "Test";
 };
-var game = {
-  money:money,
-  fuel:fuel,
-  
-};
 
-rocketLaunch1.addEventListener("click", rockLaunch1);
+
+rocketLaunch1.addEventListener("click", "rockLaunch1");
