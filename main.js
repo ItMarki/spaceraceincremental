@@ -10,9 +10,8 @@ rockLaunch1.textContent = "Test";
 };
 var game = {
   money:money,
-  rocketLaunch1:rocketLaunch1,
   fuel:fuel,
   
 }
 
-game.rocketLaunch1.addEventListener("click", rockLaunch1);
+rocketLaunch1.addEventListener("click", rockLaunch1);
