@@ -9,9 +9,9 @@ var rockLaunch1 = function() {
 rockLaunch1.textContent = "Test";
 };
 var game = {
-  money = money,
-  rockLaunch1 = rockLaunch1,
-  fuel = fuel,
+  money:money,
+  rockLaunch1:rockLaunch1,
+  fuel:fuel,
   
 }
 
