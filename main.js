@@ -7,8 +7,8 @@ var game = {
 
 document.getElementById("money").innerHTML = money;
 var rocketLaunch1 = function() {
-  fuel = fuel - 100;
-  money = money + 1000;
+  game.fuel = game.fuel - 100;
+  game.money = game.money + 1000;
 rockLaunch1.textContent = "Test";
 };
 
