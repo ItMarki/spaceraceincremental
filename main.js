@@ -9,3 +9,6 @@ getRockLaunch1.textContent = "Test";
 };
 
 getRockLaunch1.addEventListener("click", rockLaunch1);
+updateDisplay: function() {
+  document.getElementById('money').value = money;
+};
