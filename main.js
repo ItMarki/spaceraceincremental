@@ -13,4 +13,4 @@ rockLaunch1.textContent = "Test";
 };
 
 
-rocketLaunch1.addEventListener("click", "rockLaunch1");
+rocketLaunch1.addEventListener("click", rockLaunch1);
