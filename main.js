@@ -12,6 +12,6 @@ var game = {
   money:money,
   fuel:fuel,
   
-}
+};
 
 rocketLaunch1.addEventListener("click", rockLaunch1);
