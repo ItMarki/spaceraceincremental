@@ -11,7 +11,7 @@ rockLaunch1.textContent = "Test";
 var game = {
   money = money,
   rockLaunch1 = rockLaunch1,
-  fuel = fuel;
+  fuel = fuel,
   
 }
 
