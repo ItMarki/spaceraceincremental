@@ -22,6 +22,8 @@ function buyFuel(fuelBought) {
 function errorFix() {
   game.money = round(game.money);
   game.fuel = round(game.fuel);
+  document.getElementById("money").innerHTML = game.money;
+  document.getElementById("fuel").innerHTML = game.fuel;
 };
 document.getElementById("money").innerHTML = game.money;
 document.getElementById("fuel").innerHTML = game.fuel;
