@@ -12,9 +12,9 @@ function rockLaunch1() {
 };
 function buyFuel(fuelBought) {
   if (game.money >=game.fuelCost*fuelBought) {
-  game.money -= game.fuelCost*fuelBought
-  game.fuel += fuelBought
-  game.fuelCost = game.fuelCost*(1.0001^fuelBought)
+  game.money -= game.fuelCost*fuelBought;
+  game.fuel += fuelBought;
+  game.fuelCost = game.fuelCost*(1.0001^fuelBought);
   }
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel;
