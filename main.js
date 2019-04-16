@@ -14,7 +14,7 @@ function buyFuel(fuelBought) {
   if (game.money >=game.fuelCost*fuelBought) {
   game.money -= game.fuelCost*fuelBought
   game.fuel += fuelBought
-  game.fuelCost += 0.001 * fuelBought;
+  game.fuelCost = game.fuelCost*(1.0001^fuelBought)
   }
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel;
