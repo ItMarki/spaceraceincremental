@@ -18,12 +18,15 @@ function buyFuel(fuelBought) {
   }
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel;
+  document.getElementById("fuelCost").innerHTML = game.fuelCost;
 };
 function errorFix() {
   game.money = round(game.money);
   game.fuel = round(game.fuel);
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel;
+  document.getElementById("fuelCost").innerHTML = game.fuelCost;
+
 };
 document.getElementById("money").innerHTML = game.money;
 document.getElementById("fuel").innerHTML = game.fuel;
