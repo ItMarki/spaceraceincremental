@@ -1,7 +1,7 @@
 
 var game = {
   money:0,
-  fuel:100,
+  fuel:150,
   fuelCost:3
 };
 function rockLaunch1() {
@@ -11,7 +11,7 @@ function rockLaunch1() {
   document.getElementById("fuel").innerHTML = floor(game.fuel);
 };
 function buyFuel(fuelBought) {
-  if (game.money >=game.fuelCost*fuelBought) {
+  if (game.money >=game.fuelCost*fuelBought && game.fuel < 150) {
   game.money -= game.fuelCost*fuelBought
   game.fuel += 100
   game.fuelCost += 0.1;
