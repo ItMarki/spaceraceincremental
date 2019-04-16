@@ -19,6 +19,14 @@ function buyFuel(fuelBought) {
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel;
 };
-
+function errorFix() {
+  game.money = round(game.money);
+  game.fuel = round(game.fuel);
+};
 document.getElementById("money").innerHTML = game.money;
 document.getElementById("fuel").innerHTML = game.fuel;
+window.setInterval(function() {
+  errorFix();
+  
+  
+}, 1000);
