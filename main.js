@@ -15,13 +15,13 @@ function rockLaunch1() {
 	
 		window.setInterval(function() {
 			if (game.fuel.amount > 0) {
-		game.money += game.moneyPerFuel;
-		game.fuel.amount -=1;
+		game.money += game.moneyPerFuel/5;
+		game.fuel.amount -= 0.2;
 		
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel.amount;
 			}
-		}, 100);
+		}, 10);
 	
 };
 
