@@ -72,7 +72,7 @@ function upgrade3() {
 function bugFix() {
   game.fuel.cost = Math.round(game.fuel.cost*100)/100;
   game.money = Math.round(game.money*100)/100;
-	game.fuel.amount = Math.round(game.fuel.amount);
+	game.fuel.amount = Math.round(game.fuel.amount*10)/10;
   document.getElementById("fuelCost").innerHTML = game.fuel.cost;
 	document.getElementById("money").innerHTML = game.money;
 document.getElementById("fuel").innerHTML = game.fuel.amount;
