@@ -4,7 +4,7 @@ var game = {
   fuel: {
   amount:150,
   cost:3,
-  max:150
+  max:150,
   },
   up1Cost:2500
 };
@@ -27,14 +27,17 @@ function buyFuel() {
   document.getElementById("fuelCost").innerHTML = game.fuel.cost;
 };
 function upgrade1() {
+	if (game.money >= game.up1Cost) {
 	game.fuel.max = Math.floor(game.fuel.max*1.1);
+	game.money -= game.up1Cost;
 	game.up1Cost = game.up1Cost*1.3;
-	
-}
+document.getElementById("upgrade1Cost").innerHTML = game.up1Cost;
+	}
+};
 function bugFix() {
   game.fuel.cost = Math.round(game.fuel.cost*100)/100;
   document.getElementById("fuelCost").innerHTML = game.fuel.cost;
-}
+};
 window.setInterval(function(){
 	bugFix();
 }, 100);
@@ -42,3 +45,4 @@ document.getElementById("money").innerHTML = game.money;
 document.getElementById("fuel").innerHTML = game.fuel.amount;
 document.getElementById("fuelCost").innerHTML = game.fuel.cost;
 document.getElementById("fuelMax").innerHTML = game.fuel.max;
+document.getElementById("upgrade1Cost").innerHTML = game.up1Cost;
