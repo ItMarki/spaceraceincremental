@@ -44,7 +44,7 @@ function upgrade2() {
 	game.up2Cost = game.up2Cost*1.7;
 document.getElementById("money").innerHTML = game.money;
 document.getElementById("upgrade2Cost").innerHTML = game.up2Cost;
-		document.getElementById("fuelCost".innerHTML = game.fuel.cost
+		document.getElementById("fuelCost").innerHTML = game.fuel.cost
 	}
 };
 function bugFix() {
