@@ -6,7 +6,8 @@ var game = {
   cost:3,
   max:150,
   },
-  up1Cost:2500
+  up1Cost:2500,
+  up2Cost: 5000
 };
 function rockLaunch1() {
   game.money += game.fuel.amount*10
@@ -34,6 +35,16 @@ function upgrade1() {
 document.getElementById("money").innerHTML = game.money;
 document.getElementById("upgrade1Cost").innerHTML = game.up1Cost;
 		document.getElementById("fuelMax").innerHTML = game.fuel.max;
+	}
+};
+function upgrade2() {
+	if (game.money >= game.up2Cost) {
+	game.fuel.cost -= 1
+	game.money -= game.up2Cost;
+	game.up2Cost = game.up2Cost*1.7;
+document.getElementById("money").innerHTML = game.money;
+document.getElementById("upgrade2Cost").innerHTML = game.up2Cost;
+		document.getElementById("fuelCost".innerHTML = game.fuel.cost
 	}
 };
 function bugFix() {
