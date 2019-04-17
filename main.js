@@ -17,7 +17,7 @@ function rockLaunch1() {
 		game.fuel.amount -=1;
   window.setInterval(function(){
 	  rockLaunch1();
-  }, 35);
+  }, 100);
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel.amount;
 	}
