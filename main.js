@@ -4,7 +4,7 @@ var game = {
   fuel: {
   amount:150,
   cost:3,
-  max:150,
+  max:150
   },
   up1Cost:2500,
   up2Cost: 5000
