@@ -15,13 +15,13 @@ function rockLaunch1() {
 	
 		window.setInterval(function() {
 			if (game.fuel.amount > 0) {
-		game.money += game.moneyPerFuel/5;
-		game.fuel.amount -= 0.2;
+		game.money += game.moneyPerFuel;
+		game.fuel.amount -= 1;
 		
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel.amount;
 			}
-		}, 10);
+		}, 40);
 	
 };
 
@@ -72,7 +72,7 @@ function upgrade3() {
 function bugFix() {
   game.fuel.cost = Math.round(game.fuel.cost*100)/100;
   game.money = Math.round(game.money*100)/100;
-	game.fuel.amount = Math.round(game.fuel.amount*10)/10;
+	game.fuel.amount = Math.round(game.fuel.amount);
   document.getElementById("fuelCost").innerHTML = game.fuel.cost;
 	document.getElementById("money").innerHTML = game.money;
 document.getElementById("fuel").innerHTML = game.fuel.amount;
