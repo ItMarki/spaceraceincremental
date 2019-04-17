@@ -2,7 +2,8 @@
 var game = {
   money:0,
   fuel:150,
-  fuelCost:3
+  fuelCost:3,
+  fuelMax:150
 };
 function rockLaunch1() {
   game.money += game.fuel*10
@@ -10,16 +11,25 @@ function rockLaunch1() {
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel;
 };
-function buyFuel(fuelBought) {
-  if (game.money >=game.fuelCost*fuelBought) {
-  game.money -= game.fuelCost*fuelBought;
-  game.fuel += fuelBought;
-  game.fuelCost += 0.0002*fuelBought;
+function buyFuel() {
+  if (game.money >=game.fuelCost*game.fuelMax) {
+    if (game.fuel === 0) {
+  game.money -= game.fuelCost*game.fuelMax;
+  game.fuel += game.fuelMax;
+  game.fuelCost += 0.0002*game.fuelMax;
+    }
   }
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel;
   document.getElementById("fuelCost").innerHTML = game.fuelCost;
 };
-
+function bugFix() {
+  game.fuelCost = Math.floor(game.fuelCost);
+  document.getElementById("fuelCost").innerHTML = game.fuelCost;
+}
+window.setInterval(function(){
+	bugFix();
+}, 100);
 document.getElementById("money").innerHTML = game.money;
 document.getElementById("fuel").innerHTML = game.fuel;
+document.getElementById("fuelCost").innerHTML = game.fuelCost;
