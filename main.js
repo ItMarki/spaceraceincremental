@@ -63,3 +63,4 @@ document.getElementById("fuel").innerHTML = game.fuel.amount;
 document.getElementById("fuelCost").innerHTML = game.fuel.cost;
 document.getElementById("fuelMax").innerHTML = game.fuel.max;
 document.getElementById("upgrade1Cost").innerHTML = game.up1Cost;
+document.getElementById("upgrade2Cost").innerHTML = game.up2Cost;
