@@ -12,7 +12,7 @@ var game = {
   up3Cost:6000
 };
 function rockLaunch1() {
-	if (game.fuel.amount > 0) {
+	if (game.fuel.amount > 1) {
 		game.money += game.moneyPerFuel;
 		game.fuel.amount -=1;
   window.setInterval(function(){
