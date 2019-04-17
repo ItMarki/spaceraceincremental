@@ -38,7 +38,11 @@ document.getElementById("upgrade1Cost").innerHTML = game.up1Cost;
 };
 function bugFix() {
   game.fuel.cost = Math.round(game.fuel.cost*100)/100;
+  game.money = Math.round(game.money*100)/100;
+	game.fuel.amount = Math.round(game.fuel.amount);
   document.getElementById("fuelCost").innerHTML = game.fuel.cost;
+	document.getElementById("money").innerHTML = game.money;
+document.getElementById("fuel").innerHTML = game.fuel.amount;
 };
 window.setInterval(function(){
 	bugFix();
