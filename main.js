@@ -24,7 +24,7 @@ function buyFuel() {
   document.getElementById("fuelCost").innerHTML = game.fuelCost;
 };
 function bugFix() {
-  game.fuelCost = Math.floor(game.fuelCost);
+  game.fuelCost = Math.floor(game.fuelCost*100)/100;
   document.getElementById("fuelCost").innerHTML = game.fuelCost;
 }
 window.setInterval(function(){
