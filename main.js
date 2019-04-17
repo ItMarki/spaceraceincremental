@@ -1,16 +1,18 @@
 
 var game = {
   money:0,
+  moneyPerFuel:10,
   fuel: {
   amount:150,
   cost:3,
   max:150
   },
   up1Cost:2500,
-  up2Cost: 5000
+  up2Cost:4000,
+  up3Cost:6000
 };
 function rockLaunch1() {
-  game.money += game.fuel.amount*10
+  game.money += game.fuel.amount*game.moneyPerFuel;
   game.fuel.amount = 0;
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel.amount;
@@ -47,6 +49,17 @@ document.getElementById("upgrade2Cost").innerHTML = game.up2Cost;
 		document.getElementById("fuelCost").innerHTML = game.fuel.cost
 	}
 };
+
+function upgrade3() {
+	if (game.money >= game.up3Cost) {
+		game.moneyPerFuel = game.moneyPerFuel*1.25;
+		game.money -= game.up3Cost
+		game.up3Cost = game.up3Cost*2
+		document.getElementById("money").innerHTML = game.money;
+		document.getElementById("upgrade3Cost").innerHTML = game.up3Cost;
+		document.getElementById("moneyPerFuel").innerHTML = game.moneyPerFuel;
+	}
+};
 function bugFix() {
   game.fuel.cost = Math.round(game.fuel.cost*100)/100;
   game.money = Math.round(game.money*100)/100;
@@ -64,3 +77,4 @@ document.getElementById("fuelCost").innerHTML = game.fuel.cost;
 document.getElementById("fuelMax").innerHTML = game.fuel.max;
 document.getElementById("upgrade1Cost").innerHTML = game.up1Cost;
 document.getElementById("upgrade2Cost").innerHTML = game.up2Cost;
+document.getElementById("upgrade3Cost").innerHTML = game.up3Cost;
