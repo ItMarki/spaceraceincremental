@@ -13,15 +13,16 @@ var game = {
 };
 function rockLaunch1() {
 	if (game.fuel.amount >= 1) {
+		window.setInterval(function() {
 		game.money += game.moneyPerFuel;
 		game.fuel.amount -=1;
-  window.setInterval(function(){
-	  rockLaunch1();
-  }, 100);
+		}, 100);
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel.amount;
 	}
 };
+
+
 function buyFuel() {
   if (game.money >=game.fuel.cost*game.fuel.max) {
     if (game.fuel.amount === 0) {
