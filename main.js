@@ -14,7 +14,7 @@ var game = {
 function rockLaunch1() {
 	if (game.fuel.amount > 0) {
 		game.money += game.moneyPerFuel;
-		game.fuel -=1;
+		game.fuel.amount -=1;
   window.setInterval(function(){
 	  rockLaunch1();
   }, 10);
