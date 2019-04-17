@@ -12,10 +12,15 @@ var game = {
   up3Cost:6000
 };
 function rockLaunch1() {
-  game.money += game.fuel.amount*game.moneyPerFuel;
-  game.fuel.amount = 0;
+	if (game.fuel.amount > 0) {
+		game.money += game.moneyPerFuel;
+		game.fuel -=1;
+  window.setInterval(function(){
+	  rockLaunch1();
+  }, 10);
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel.amount;
+	}
 };
 function buyFuel() {
   if (game.money >=game.fuel.cost*game.fuel.max) {
