@@ -35,6 +35,13 @@ function buyFuel() {
   game.fuel.cost += 0.0005*game.fuel.max*game.fuel.scaleDown;
     }
   }
+	if (game.money < game.fuel.cost*game.fuel.max) {
+		
+		var halp = Math.floor(game.money/game.fuel.cost);
+		game.fuel.amount += halp;
+		game.money-=game.fuel.cost*halp;
+		halp = 0;
+	}
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel.amount;
   document.getElementById("fuelCost").innerHTML = game.fuel.cost;
