@@ -5,9 +5,9 @@
 	<head>
 	</head>
   <body>
-	  <button class="tab" onclick="switchTab('game')">Game</button>
-	  <button class="tab" onclick="switchTab('test')">Test</button>
-	  <div id="game" class="inTab">
+	  <button class="tabe" onclick="tab('game')">Game</button>
+	  <button class="tabe" onclick="tab('test')">Test</button>
+	  <div id="game" class="tab">
 <button onclick="rockLaunch1()">Launch a small rocket,<br>You lose your fuel, and gain money.<br>This feature will automate itself forever.</button>
 <br>
 	You have <span id = "money"></span>$<br>
@@ -22,27 +22,19 @@
 	  <br>
 	  <br>
 	  </div>
-	  <div id="test" class="inTab">
+	  <div id="test" class="tab">
 		  yay it worked
 		  
 	  </div>
 	  <script>
-		  function tabs(tabName) {
-	var i, inTab, tab;
-		inTab = document.getElementsByClassName("inTab");
-  for (i = 0; i < inTab.length; i++) {
-    inTab[i].style.display = "none";
-  }	  
-	tab = document.getElementsByClassName("tab");
-  for (i = 0; i < tab.length; i++) {
-    tab[i].className = tab[i].className.replace(" active", "");
-  }
-	document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-	
-}
-		  
+		function tab(t) {
+			var classList = document.getElementsByClassName("tab");
+	for(var i = 0; i < classList.length; i++) {
+		classList[i].style.display = "none"
+	}
+			ge(t).style.display = ""
+		}
+		  tab("game")
 		  </script>
 	  <br>
 Thanks to SuperSpruce for some of the code! You can check out his YouTube channel <a href = "https://www.youtube.com/channel/UCrpbLYZYpwpkrW9j9x8Ci2A" target = "_blank">here</a>.
