@@ -14,13 +14,15 @@ var game = {
 };
 function rockLaunch1() {
 	
-		window.setInterval(function() {
+		var rocketAuto = setInterval(function() {
 			if (game.fuel.amount > 0) {
 		game.money += game.moneyPerFuel;
 		game.fuel.amount -= 1;
 		
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel.amount;
+			}else{
+				clearInterval(rocketAuto);
 			}
 		}, 40);
 	
