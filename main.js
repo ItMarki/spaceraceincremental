@@ -25,7 +25,7 @@ function rockLaunch1() {
 		
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel.amount;
-			}else if (game.auto.rocket = false){
+			}else if (game.auto.rocket === false){
 				clearInterval(rocketAuto);
 			}
 		}, 40);
