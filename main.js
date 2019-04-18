@@ -68,7 +68,7 @@ function upgrade2() {
 	game.fuel.cost -= 1;
 	game.fuel.scaleDown = 0.9*game.fuel.scaleDown;
 	game.money -= game.up2Cost;
-	game.up2Cost = game.up2Cost*1.7;
+	game.up2Cost = game.up2Cost*1.5;
 document.getElementById("money").innerHTML = game.money;
 document.getElementById("upgrade2Cost").innerHTML = game.up2Cost;
 		document.getElementById("fuelCost").innerHTML = game.fuel.cost
@@ -78,8 +78,8 @@ document.getElementById("upgrade2Cost").innerHTML = game.up2Cost;
 function upgrade3() {
 	if (game.money >= game.up3Cost) {
 		game.moneyPerFuel = game.moneyPerFuel*1.25;
-		game.money -= game.up3Cost
-		game.up3Cost = game.up3Cost*2
+		game.money -= game.up3Cost;
+		game.up3Cost = game.up3Cost*1.7;
 		document.getElementById("money").innerHTML = game.money;
 		document.getElementById("upgrade3Cost").innerHTML = game.up3Cost;
 		document.getElementById("moneyPerFuel").innerHTML = game.moneyPerFuel;
