@@ -8,6 +8,10 @@ var game = {
   max:150,
   scaleDown:1
   },
+  auto: {
+  rocket:false,
+  fuel:false
+  },
   up1Cost:2500,
   up2Cost:4000,
   up3Cost:6000
@@ -21,7 +25,7 @@ function rockLaunch1() {
 		
   document.getElementById("money").innerHTML = game.money;
   document.getElementById("fuel").innerHTML = game.fuel.amount;
-			}else{
+			}else if (game.auto.rocket = false){
 				clearInterval(rocketAuto);
 			}
 		}, 40);
