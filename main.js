@@ -5,7 +5,8 @@ var game = {
   fuel: {
   amount:150,
   cost:3,
-  max:150
+  max:150,
+  scaleDown:1
   },
   up1Cost:2500,
   up2Cost:4000,
@@ -31,7 +32,7 @@ function buyFuel() {
     if (game.fuel.amount === 0) {
   game.money -= game.fuel.cost*game.fuel.max;
   game.fuel.amount += game.fuel.max;
-  game.fuel.cost += 0.0005*game.fuel.max;
+  game.fuel.cost += 0.0005*game.fuel.max*game.fuel.scaleDown;
     }
   }
   document.getElementById("money").innerHTML = game.money;
@@ -50,7 +51,8 @@ document.getElementById("upgrade1Cost").innerHTML = game.up1Cost;
 };
 function upgrade2() {
 	if (game.money >= game.up2Cost) {
-	game.fuel.cost -= 1
+	game.fuel.cost -= 1;
+	game.fuel.scaleDown = 0.9*game.fuel.scaleDown;
 	game.money -= game.up2Cost;
 	game.up2Cost = game.up2Cost*1.7;
 document.getElementById("money").innerHTML = game.money;
