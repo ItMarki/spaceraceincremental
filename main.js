@@ -78,6 +78,7 @@ function upgrade3() {
 		document.getElementById("moneyPerFuel").innerHTML = game.moneyPerFuel;
 	}
 };
+
 function bugFix() {
   game.fuel.cost = Math.round(game.fuel.cost*100)/100;
   game.money = Math.round(game.money*100)/100;
