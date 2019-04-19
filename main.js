@@ -168,3 +168,6 @@ document.getElementById("fuelMax").innerHTML = game.fuel.max;
 document.getElementById("upgrade1Cost").innerHTML = game.up1Cost;
 document.getElementById("upgrade2Cost").innerHTML = game.up2Cost;
 document.getElementById("upgrade3Cost").innerHTML = game.up3Cost;
+document.getElementById("upgrade1Buys").innerHTML = game.up1buys;
+document.getElementById("upgrade2Buys").innerHTML = game.up2buys;
+document.getElementById("upgrade3Buys").innerHTML = game.up3buys;
