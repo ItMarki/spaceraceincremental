@@ -18,6 +18,7 @@ var game = {
 	up2buys:0,
   up3Cost:6000,
 	up3buys:0,
+  creat:0
 };
 function rockLaunch1() {
 	
@@ -107,6 +108,30 @@ function bugFix() {
   document.getElementById("fuelCost").innerHTML = game.fuel.cost;
 	document.getElementById("money").innerHTML = game.money;
 document.getElementById("fuel").innerHTML = game.fuel.amount;
+};
+function prestige1() {
+	if (game.up1buys >=5 && game.up2buys >= 5 && game.up3buys >= 5 && game.money >= 100000)
+	game.creat += Math.floor(Math.sqrt(game.money/100000));
+	game = {
+  money:0,
+  moneyPerFuel:10,
+  fuel: {
+  amount:150,
+  cost:3,
+  max:150,
+  scaleDown:1
+  },
+  auto: {
+  rocket:false,
+  fuel:false
+  },
+  up1Cost:2500,
+  up1buys:0,
+  up2Cost:4000,
+	up2buys:0,
+  up3Cost:6000,
+	up3buys:0,
+	};
 };
 window.setInterval(function(){
 	bugFix();
