@@ -117,7 +117,7 @@ function save() {
 };
 function load() {
 	if(!localStorage.sri) return;
-	game = JSON.parse(atob(localStorage.wr));
+	game = JSON.parse(atob(localStorage.sri));
 	
 	transformToDecimal(game)
 };
