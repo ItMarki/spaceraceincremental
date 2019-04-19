@@ -112,6 +112,19 @@ document.getElementById("fuel").innerHTML = game.fuel.amount;
 window.setInterval(function(){
 	bugFix();
 }, 100);
+function save() {
+	localStorage.wr = btoa(JSON.stringify(game));
+};
+function load() {
+	if(!localStorage.wr) return;
+	game = JSON.parse(atob(localStorage.wr));
+	
+	transformToDecimal(game)
+};
+load();
+window.setInterval(function(){
+	save();
+}, 2000
 document.getElementById("money").innerHTML = game.money;
 document.getElementById("fuel").innerHTML = game.fuel.amount;
 document.getElementById("fuelCost").innerHTML = game.fuel.cost;
