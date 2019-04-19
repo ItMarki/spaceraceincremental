@@ -113,10 +113,10 @@ window.setInterval(function(){
 	bugFix();
 }, 100);
 function save() {
-	localStorage.wr = btoa(JSON.stringify(game));
+	localStorage.sri = btoa(JSON.stringify(game));
 };
 function load() {
-	if(!localStorage.wr) return;
+	if(!localStorage.sri) return;
 	game = JSON.parse(atob(localStorage.wr));
 	
 	transformToDecimal(game)
