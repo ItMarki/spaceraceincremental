@@ -7,6 +7,7 @@
   <body>
 	  <button class="tabe" onclick="tab('game')">Game</button>
 	  <button class="tabe" onclick="tab('sources')">Sources</button>
+	  <button class="tabe" onclick="tab('options')">Options</button>
 	  <div id="game" class="tab">
 <button onclick="rockLaunch1()">Launch a small rocket,<br>You lose your fuel, and gain money.</button>
 <br>
@@ -33,6 +34,10 @@
 		  Primary:
 		  none yet
 	  </div>
+	  <div id="options" class="tab>
+				   <button onclick="fullReset">Reset the game</button>	   
+				   
+	</div>
 	  <script>
 		function tab(t) {
 			var classList = document.getElementsByClassName("tab");
