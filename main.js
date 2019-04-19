@@ -124,7 +124,7 @@ function load() {
 load();
 window.setInterval(function(){
 	save();
-}, 2000
+}, 2000);
 document.getElementById("money").innerHTML = game.money;
 document.getElementById("fuel").innerHTML = game.fuel.amount;
 document.getElementById("fuelCost").innerHTML = game.fuel.cost;
