@@ -94,8 +94,7 @@ function upgrade3() {
 		game.up3Cost = game.up3Cost*1.7;
 		game.up3buys += 1;
 		document.getElementById("money").innerHTML = game.money;
-		document.getElementById("upgrade3Cost").innerHTML = game.up3Cost;
-		document.getElementById("moneyPerFuel").innerHTML = game.moneyPerFuel;
+		document.getElementById("upgrade3Cost").innerHTML = game.up3Cost;\
 			document.getElementById("upgrade3Buys").innerHTML = game.up3buys;
 		}
 	}
