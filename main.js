@@ -131,6 +131,36 @@ load();
 window.setInterval(function(){
 	save();
 }, 2000);
+function fullReset() {
+	game = {
+  money:0,
+  moneyPerFuel:10,
+  fuel: {
+  amount:150,
+  cost:3,
+  max:150,
+  scaleDown:1
+  },
+  auto: {
+  rocket:false,
+  fuel:false
+  },
+  up1Cost:2500,
+  up1buys:0,
+  up2Cost:4000,
+	up2buys:0,
+  up3Cost:6000,
+	up3buys:0,
+};
+document.getElementById("money").innerHTML = game.money;
+document.getElementById("fuel").innerHTML = game.fuel.amount;
+document.getElementById("fuelCost").innerHTML = game.fuel.cost;
+document.getElementById("fuelMax").innerHTML = game.fuel.max;
+document.getElementById("upgrade1Cost").innerHTML = game.up1Cost;
+document.getElementById("upgrade2Cost").innerHTML = game.up2Cost;
+document.getElementById("upgrade3Cost").innerHTML = game.up3Cost;	
+	
+};
 document.getElementById("money").innerHTML = game.money;
 document.getElementById("fuel").innerHTML = game.fuel.amount;
 document.getElementById("fuelCost").innerHTML = game.fuel.cost;
