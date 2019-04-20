@@ -119,7 +119,7 @@ function prestige1() {
 	game.creat += Math.floor(Math.sqrt(game.money/50000));
 	game = {
   money:0,
-  moneyPerFuel:10,
+  moneyPerFuel:10*game.creat,
   fuel: {
   amount:150,
   cost:3,
