@@ -111,7 +111,7 @@ function bugFix() {
 document.getElementById("fuel").innerHTML = game.fuel.amount;
 };
 function p1Gain() {
-	game.creatGainReset = Math.floor(Math.sqrt(game.money/100000);
+	game.creatGainReset = Math.floor(Math.sqrt(game.money/100000));
 					 document.getElementById("gainOnBrainstorm").innerHTML = game.creatGainReset;
 }
 function prestige1() {
