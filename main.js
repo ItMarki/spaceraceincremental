@@ -111,12 +111,12 @@ function bugFix() {
 document.getElementById("fuel").innerHTML = game.fuel.amount;
 };
 function p1Gain() {
-	game.creatGainReset = Math.floor(Math.sqrt(game.money/100000));
+	game.creatGainReset = Math.floor(Math.sqrt(game.money/50000));
 					 document.getElementById("gainOnBrainstorm").innerHTML = game.creatGainReset;
 }
 function prestige1() {
-	if (game.up1buys >=5 && game.up2buys >= 5 && game.up3buys >= 5 && game.money >= 100000)
-	game.creat += Math.floor(Math.sqrt(game.money/100000));
+	if (game.up1buys >=5 && game.up2buys >= 5 && game.up3buys >= 5 && game.money >= 50000)
+	game.creat += Math.floor(Math.sqrt(game.money/50000));
 	game = {
   money:0,
   moneyPerFuel:10,
