@@ -127,8 +127,8 @@ function prestige1() {
   scaleDown:1
   },
   auto: {
-  rocket:false,
-  fuel:false
+  rocket:game.auto.rocket,
+  fuel:game.auto.fuel
   },
   up1Cost:2500,
   up1buys:0,
@@ -136,8 +136,19 @@ function prestige1() {
 	up2buys:0,
   up3Cost:6000,
 	up3buys:0,
-	creatGainReset:0
+	creatGainReset:0,
+	creat:game.creat
 	};
+	document.getElementById("money").innerHTML = game.money;
+document.getElementById("fuel").innerHTML = game.fuel.amount;
+document.getElementById("fuelCost").innerHTML = game.fuel.cost;
+document.getElementById("fuelMax").innerHTML = game.fuel.max;
+document.getElementById("upgrade1Cost").innerHTML = game.up1Cost;
+document.getElementById("upgrade2Cost").innerHTML = game.up2Cost;
+document.getElementById("upgrade3Cost").innerHTML = game.up3Cost;
+document.getElementById("upgrade1Buys").innerHTML = game.up1buys;
+document.getElementById("upgrade2Buys").innerHTML = game.up2buys;
+document.getElementById("upgrade3Buys").innerHTML = game.up3buys;
 };
 window.setInterval(function(){
 	bugFix();
@@ -182,6 +193,8 @@ function fullReset() {
 	up2buys:0,
   up3Cost:6000,
 	up3buys:0,
+creatGainReset:0,
+creat:0
 };
 document.getElementById("money").innerHTML = game.money;
 document.getElementById("fuel").innerHTML = game.fuel.amount;
@@ -189,7 +202,10 @@ document.getElementById("fuelCost").innerHTML = game.fuel.cost;
 document.getElementById("fuelMax").innerHTML = game.fuel.max;
 document.getElementById("upgrade1Cost").innerHTML = game.up1Cost;
 document.getElementById("upgrade2Cost").innerHTML = game.up2Cost;
-document.getElementById("upgrade3Cost").innerHTML = game.up3Cost;	
+document.getElementById("upgrade3Cost").innerHTML = game.up3Cost;
+document.getElementById("upgrade1Buys").innerHTML = game.up1buys;
+document.getElementById("upgrade2Buys").innerHTML = game.up2buys;
+document.getElementById("upgrade3Buys").innerHTML = game.up3buys;	
 	
 };
 document.getElementById("money").innerHTML = game.money;
