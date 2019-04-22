@@ -20,7 +20,7 @@ var game = {
 	up3buys:0,
   creat:0,
 	creatGainReset:0,
-  rockLimit = false
+  rockLimit:false
 };
 function rockLaunch1() {
 	var rocketAuto = setInterval(function() {
@@ -195,7 +195,7 @@ function fullReset() {
 	up3buys:0,
 creatGainReset:0,
 creat:0,
-rockLimit = false
+rockLimit:false
 };
 document.getElementById("money").innerHTML = game.money;
 document.getElementById("fuel").innerHTML = game.fuel.amount;
