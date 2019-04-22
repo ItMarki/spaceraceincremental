@@ -23,8 +23,9 @@ var game = {
   rockLimit:false
 };
 function rockLaunch1() {
+	if (game.rockLimit === false) {
 	var rocketAuto = setInterval(function() {
-	if (game.fuel.amount > 0 && game.rockLimit === false) {
+	if (game.fuel.amount > 0) {
 		game.rockLimit = true;
 	game.money += game.moneyPerFuel;
 	game.fuel.amount -= 1;
@@ -36,6 +37,7 @@ function rockLaunch1() {
 	clearInterval(rocketAuto);
 	}
 	}, 40);	
+	}
 };
 
 function buyFuel() {
