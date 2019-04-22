@@ -24,7 +24,7 @@ var game = {
 };
 function rockLaunch1() {
 	var rocketAuto = setInterval(function() {
-	if (game.fuel.amount > 0 && game.rockLimit = false) {
+	if (game.fuel.amount > 0 && game.rockLimit === false) {
 		game.rockLimit = true;
 	game.money += game.moneyPerFuel;
 	game.fuel.amount -= 1;
@@ -194,7 +194,8 @@ function fullReset() {
   up3Cost:6000,
 	up3buys:0,
 creatGainReset:0,
-creat:0
+creat:0,
+rockLimit = false
 };
 document.getElementById("money").innerHTML = game.money;
 document.getElementById("fuel").innerHTML = game.fuel.amount;
