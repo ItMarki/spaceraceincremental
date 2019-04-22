@@ -19,17 +19,20 @@ var game = {
   up3Cost:6000,
 	up3buys:0,
   creat:0,
-	creatGainReset:0
+	creatGainReset:0,
+  rockLimit = false
 };
 function rockLaunch1() {
 	var rocketAuto = setInterval(function() {
-	if (game.fuel.amount > 0) {
+	if (game.fuel.amount > 0 && game.rockLimit = false) {
+		game.rockLimit = true;
 	game.money += game.moneyPerFuel;
 	game.fuel.amount -= 1;
 	game.money = Math.round(game.money*100)/100;
 	document.getElementById("money").innerHTML = game.money;
 	document.getElementById("fuel").innerHTML = game.fuel.amount;
 	}else if (game.auto.rocket === false){
+	game.rockLimit = false;
 	clearInterval(rocketAuto);
 	}
 	}, 40);	
